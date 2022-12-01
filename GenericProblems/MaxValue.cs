@@ -17,7 +17,7 @@ namespace GenericProblems
             {
                 return value3;
             }
-           return value1;
+           return value3;
            // throw new Exception("All Strings are same");
 
         }
