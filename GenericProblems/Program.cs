@@ -4,7 +4,9 @@
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Wellcome to Generics Program");
+            Console.WriteLine("Wellcome to Generics Program\n");
+            int output = MaxValue.MaxIntegerNumber(11, 222, 3333);
+            Console.WriteLine("Max integer number is: " + output);
         }
     }
 }
