@@ -22,7 +22,8 @@ namespace GenericProblems
             {
                 return value3;
             }
-            throw new Exception("firstValue, secondValue and thirdValue are same");
+            return value1;
+           // throw new Exception("firstValue, secondValue and thirdValue are same");
 
         }
     }
