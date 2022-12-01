@@ -9,14 +9,16 @@ namespace GenericProblems
         {
             Console.WriteLine("Wellcome to Generics Program");
 
-            MaxValue maxValue = new MaxValue();
-            int output1 = maxValue.MaxValueCheck<int>(11, 222, 3333);
+            MaxValue<int> maxValueint = new MaxValue<int>(11, 222, 3333);
+            int output1 = maxValueint.MaxMethod();
             Console.WriteLine("\nMax integer number is: " + output1);
 
-            float output2 = maxValue.MaxValueCheck<float>(1.1f, 2.22f, 3.333f);
+            MaxValue<float> maxValuefloat = new MaxValue<float>(1.1f, 2.22f, 3.333f);
+            float output2 = maxValuefloat.MaxMethod();
             Console.WriteLine("\nMax float number is: " + output2);
 
-            string output3 = maxValue.MaxValueCheck<string>("Banana", "Apple", "Peach");
+            MaxValue<string> maxValuestring = new MaxValue<string>("Apple", "Peach", "Banana");
+            string output3 = maxValuestring.MaxMethod();
             Console.WriteLine("\nMax String is: " + output3);
         }
     }

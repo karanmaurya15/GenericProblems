@@ -1,10 +1,17 @@
 ﻿
 namespace GenericProblems
 {
-    internal class MaxValue
+    internal class MaxValue<T> where T : IComparable
     {
-        public T MaxValueCheck<T>(T value1, T value2, T value3) where T : IComparable
+        public T Value1, Value2, Value3;
+        public MaxValue(T value1, T value2, T value3)
         {
+            this.Value1 = value1;
+            this.Value2 = value2;
+            this.Value3 = value3;
+        }
+        public static T MaxValueCheck(T value1, T value2, T value3)
+        { 
             if (value1.CompareTo(value2) > 0 && value1.CompareTo(value3) > 0)
             {
                 return value1;
@@ -17,8 +24,12 @@ namespace GenericProblems
             {
                 return value3;
             }
-            throw new Exception("All Strings are same");
-
+            return default;
+        }
+        public T MaxMethod()
+        {
+            T max = MaxValue<T>.MaxValueCheck(this.Value1, this.Value2, this.Value3);
+            return max;
         }
     }
 }
