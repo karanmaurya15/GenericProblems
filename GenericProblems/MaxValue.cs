@@ -22,7 +22,7 @@ namespace GenericProblems
             {
                 return value3;
             }
-            return value1;
+            return value2;
            // throw new Exception("firstValue, secondValue and thirdValue are same");
 
         }
