@@ -5,8 +5,8 @@
         static void Main(string[] args)
         {
             Console.WriteLine("Wellcome to Generics Program\n");
-            float output = MaxValue.MaxFloatNumber(1.1f, 2.22f, 3.333f);
-            Console.WriteLine("Max integer number is: " + output);
+            float output = MaxValue.MaxFloatNumber(3.333f, 2.22f, 1.1f);
+            Console.WriteLine("Max Float number is: " + output);
         }
     }
 }
