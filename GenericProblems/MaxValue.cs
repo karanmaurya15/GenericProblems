@@ -3,7 +3,7 @@ namespace GenericProblems
 {
     internal class MaxValue
     {
-        public static string MaxString(string value1, string value2, string value3)
+        public T MaxValueCheck<T>(T value1, T value2, T value3) where T : IComparable
         {
             if (value1.CompareTo(value2) > 0 && value1.CompareTo(value3) > 0)
             {
@@ -17,8 +17,7 @@ namespace GenericProblems
             {
                 return value3;
             }
-           return value3;
-           // throw new Exception("All Strings are same");
+            throw new Exception("All Strings are same");
 
         }
     }
