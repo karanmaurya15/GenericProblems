@@ -21,21 +21,11 @@ namespace GenericProblems
             string output3 = maxValueString.MaxMethod();
             Console.WriteLine("\nMax integer number is : " + output3);
 
-            // Using Sorting
-            Console.WriteLine("\n~~~~~Using Sorting~~~~~");
-            int[] array = { 14, 564, 733, 448 };
-            MaxValue<int> maxValueInt = new MaxValue<int>(array);
-            var SortedArray = maxValueInt.Sort(array);
-            Console.Write("\nSoeted values are : ");
-            foreach (int item in SortedArray)
-            {
-              
-                Console.Write( " " + item);
-            }
-            Console.WriteLine();
-            var max = SortedArray[SortedArray.Length-1];
-            Console.WriteLine("\nMax value is " + max);
-          
+
+            Console.WriteLine("\n~~~~~Finding Max value~~~~~");
+            int[] array = { 14, 564, 733, 448, 678 };
+            MaxValue<int> maxValue = new MaxValue<int>(array);
+            maxValue.PrintMaxValue();
         }
     }
 }

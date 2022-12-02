@@ -38,18 +38,27 @@
             T max = MaxValue<T>.MaxNumber(this.value1, this.value2, this.value3, this.value4);
             return max;
         }
-        // Using Sorting
+        // Finding max value
         public T[] values;
         public MaxValue(T[] values)
         {
-            this.values = values;
-            
+            this.values = values;           
         }
-        public T[] Sort(T[] values)
+        public T[] Sort(T[] value)
         {
-            Array.Sort(values);
-            return values;
+            Array.Sort(value);
+            return value;
         }
-       
+        public T MaxValueCheck(params T[] value) // when we don't know size of array we use params keyword
+        {
+            var sorted_values = Sort(value);
+            return sorted_values[^1]; // [^1] == [values.Count()-1])  
+        }     
+        public void PrintMaxValue()
+        {
+            var max = MaxValueCheck(this.values);
+            Console.WriteLine("\nMaximum Value is: " + max);
+        }
+
     }
 }
